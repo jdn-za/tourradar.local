@@ -10,7 +10,7 @@
 
 
 ```
-echo '127.0.0.1 tourradar.local' | sudo tee -a /etc/hosts (not absolutely necessary, just looked nicer)
+echo '127.0.0.1 tourradar.local' | sudo tee -a /etc/hosts (not absolutely necessary, just looked nicer [apache ServerName is set tourradar.local])
 
 docker-compose up --build
 ```
