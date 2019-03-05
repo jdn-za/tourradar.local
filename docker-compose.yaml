@@ -124,7 +124,6 @@ services:
     networks: 
       - elk
     volumes:
-      - ./jenkins/data:/data
       - ./jenkins/config/jobs:/jobs/
       - ./jenkins/config/jenkins.yaml:/var/jenkins_home/jenkins.yaml:ro
 
