@@ -15,6 +15,18 @@ echo '127.0.0.1 tourradar.local' | sudo tee -a /etc/hosts (not absolutely necess
 docker-compose up --build
 ```
 
+Services:
+ - Nginx load balancer
+ - Apache HTTP
+ - PHP-FPM
+ - Redis
+ - Elasticsearch
+ - Logstash
+ - Kibana
+ - Jenkins
+ - Filebeat
+ 
+
 ## Jenkins:
 
 Jenkins has been configured using https://github.com/jenkinsci/configuration-as-code-plugin and can be reached via http://tourradar.local:8080
