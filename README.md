@@ -1,6 +1,6 @@
 # tourradar.local
 
-## Asumptions
+## Assumptions
 - I have built and tested this on OSX, 
 - Docker engine 18.09 
 - docker-compose version 1.23.2
@@ -10,7 +10,7 @@
 
 
 ```
-echo '127.0.0.1 tourradar.local' | sudo tee -a /etc/hosts (not absoulutley nessecary, just looked nicer)
+echo '127.0.0.1 tourradar.local' | sudo tee -a /etc/hosts (not absolutely necessary, just looked nicer)
 
 docker-compose up --build
 ```
@@ -24,7 +24,7 @@ user: admin
 password: tourradar
 ```
 
-A single https://github.com/jenkinsci/job-dsl-plugin job has been configured to perform elasticsearch garabge colelction every day, removing indices older than 30 days.
+A single https://github.com/jenkinsci/job-dsl-plugin job has been configured to perform elasticsearch garbage collection every day, removing indices older than 30 days.
 
 
 
@@ -36,4 +36,4 @@ Kibana dashboard is under http://tourradar.local:5601
 
 ## Logs
 
-Currently logs are pushed into logstash using filebeat, whilst functional the i/o overhead when comapred to doing so with syslog over udp directly to logstash is less than ideal. This again was a result of runnign out of time.
+Currently logs are pushed into logstash using filebeat, whilst functional the i/o overhead when compared to doing so with syslog over udp directly to logstash is less than ideal. This again was a result of running out of time.
