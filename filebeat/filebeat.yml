@@ -1,0 +1,9 @@
+filebeat.registry_file: /usr/share/filebeat/data/registry
+filebeat.modules:
+- module: apache2
+  access:
+    var.paths: ["/var/log/apache2/access_log*"]
+  error:
+    var.paths: ["/var/log/apache2/error_log*"]
+output.logstash:
+  hosts: ["logstash:5044"]

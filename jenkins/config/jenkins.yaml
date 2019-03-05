@@ -1,0 +1,19 @@
+jenkins:
+  systemMessage: "Jenkins configured automatically by Jenkins Configuration as Code Plugin\n\n"
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "tourradar"
+  authorizationStrategy: loggedInUsersCanDoAnything 
+jobs:
+  - script: >
+      job('elasticsearch-garbage-collection') {
+          triggers {
+              cron("@daily")
+          }
+          steps {
+              shell("curator --config /jobs/elasticsearch.yaml /jobs/remove_30d_index.yaml")
+          }
+      }
