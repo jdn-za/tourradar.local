@@ -1,7 +1,7 @@
 # tourradar.local
 
 ## Assumptions
-- I have built and tested this on OSX, 
+- I have built and tested this on OSX 10.14.3
 - Docker engine 18.09 
 - docker-compose version 1.23.2
 - tee is installed
