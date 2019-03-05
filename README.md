@@ -34,3 +34,6 @@ Kibana dashboard is under http://tourradar.local:5601
 
 - Kibana is not as yet fully configured as I ran out of time, the default index using `logstash-*` with timestamp `@timestamp` needs to be set
 
+## Logs
+
+Currently logs are pushed into logstash using filebeat, whilst functional the i/o overhead when comapred to doing so with syslog over udp directly to logstash is less than ideal. This again was a result of runnign out of time.
